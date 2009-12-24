@@ -1,0 +1,13 @@
+<tal:block content="structure portlet:portlet.navigation" />
+<br />
+
+<div class="z-portlet" id="commonTasks"
+     tal:define="view context/@@commonTasks|nothing"
+     tal:condition="view/strip|nothing">
+  <h2 class="z-portlet-header" i18n:translate="">Add:</h2>
+  <div class="z-portlet-body">
+    <div class="z-portlet-item odd"
+	 tal:content="structure view">
+    </div>
+  </div>
+</div>

@@ -1,0 +1,799 @@
+/* zrt-cssregistry: */
+
+body {
+  background-color: contentBackgroundColor;
+  color: fontColor;
+  margin: 0;
+  padding: 0;
+  font: fontBaseSize fontFamily;
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,cite,
+pre,form,fieldset,input,textarea,p,blockquote,th,td{
+  margin:0;
+  padding:0;
+}
+
+table {
+  border: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+  font-size: inherit;
+  font: 100%;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+address,caption,cite,code,dfn,th,var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+cite {
+  font-style: italic;
+}
+
+caption,th {
+  text-align: left;
+}
+
+q:before, q:after {
+  content: '';
+}
+
+a {
+  color: linkColor;
+  background-color: transparent;
+}
+
+.a {
+  color: linkColor;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+img {
+  border: none;
+  vertical-align: middle;
+}
+
+p {
+  margin: 0 0 0.75em 0;
+  line-height: 1.5em;
+}
+
+p img {
+  border: none;
+  margin: 0;
+}
+
+hr {
+  border: 0;
+  height: borderWidth;
+  color: globalBorderColor;
+  background-color: globalBorderColor;
+  margin: 0.5em 0 1em 0;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+  color: fontColor;
+  background-color: transparent;
+  font-family: headingFontFamily;
+  margin: 0 0 0.25em 0;
+  border-bottom: borderWidth borderStyle globalBorderColor;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 150%;
+}
+
+h2 {
+  font-size: 140%;
+}
+
+h3 {
+  font-size: 125%;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 110%;
+  border-bottom: none;
+  font-weight: bold;
+}
+
+h5 {
+    font-size: 100%;
+    border-bottom: none;
+    font-weight: bold;
+}
+
+h6 {
+    font-size: fontSmallSize;
+    border-bottom: none;
+    font-weight: bold;
+}
+
+ul {
+  padding: 0;
+  margin: 0.5em 0 0 1.5em;
+  line-height: 1.5em;
+}
+
+ol {
+  line-height: 1.5em;
+  padding: 0;
+  margin: 0.5em 0 0 1.8em;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-bottom: 1em;
+}
+
+fieldset {
+  border: borderWidth borderStyle globalBorderColor;
+  margin: 1em 0 1em 0;
+  padding: 0 1em 0 1em;
+  font-size: 110%;
+}
+
+legend {
+    background: globalBackgroundColor;
+    padding: 0.3em;
+    font-size: 90%;
+}
+
+form {
+    border: none;
+    margin: 0;
+}
+
+label {
+    font-weight: bold;
+}
+
+textarea {
+  font-size: 99%;
+  font-family: monospaceFontFamily;
+  border: borderWidth solid globalBorderColor;
+  color: inputFontColor;
+  background: White;
+  width: 80%;
+}
+
+input {
+  font-size: 99%;
+  font-family: fontFamily;
+  visibility: visible;
+  border: borderWidth solid globalBorderColor;
+  color: inputFontColor;
+  vertical-align: middle;
+  background: white;
+}
+
+select {
+  font-size: 99%;
+  border: borderWidth solid globalBorderColor;
+  color: inputFontColor;
+  background-color: white;
+  vertical-align: top;
+}
+
+abbr, acronym, .explain {
+  border: 0;
+  border-bottom: borderWidth dotted fontColor;
+  color: fontColor;
+  background-color: transparent;
+  cursor: help;
+}
+
+q {
+  font-family: Baskerville, Georgia, serif;
+  font-style: italic;
+  font-size: 120%;
+}
+
+blockquote {
+  padding-left: 0.5em;
+  margin-left: 0;
+  border-left: 4px solid globalBorderColor;
+  color: discreetColor;
+}
+
+code {
+  font-size: 120%;
+  font-family: monospaceFontFamily;
+  color: fontColor;
+  background-color: globalBackgroundColor;
+  padding: 0 0.1em;
+}
+
+pre {
+  font-size: 100%;
+  font-family: monospaceFontFamily;
+  padding: 1em;
+  border: borderWidth borderStyle globalBorderColor;
+  color: fontColor;
+  background-color: globalBackgroundColor;
+  overflow: auto;
+  margin-bottom: 0.5em;
+}
+
+ins {
+  color: green;
+  text-decoration: none;
+}
+
+del {
+  color: red;
+  text-decoration: line-through;
+}
+
+.z-portal-divider { 
+  border-bottom: borderWidth borderStyle globalBorderColor;
+}
+
+/* portal logo */
+#z-portal-logo {
+  border: 0;
+  padding: 0.5em 0em 0.75em 1.5em;
+}
+
+/* footer */
+#z-portal-footer { 
+  text-align: center;
+  color: discreetColor;
+  font-size: 90%;
+  padding: 2em 2em 1em 2em;
+  margin-top: 3em;
+}
+
+#z-portal-footer a {
+  color: discreetColor;
+}
+
+
+/* columns */
+#portal-columns-table {
+  width: 100%;
+  vertical-align: top;
+  margin-top: 2em;
+}
+
+#portal-columns-table tr {
+  vertical-align: top;
+}
+  
+#portal-columns #z-portal-workspace {
+  margin: 0;
+}
+
+#portal-column-one { 
+  width: 16em;
+  padding-right: 2em;
+  vertical-align: top;
+}
+  
+#portal-column-content {
+  vertical-align: top;
+}
+
+
+
+/*
+** Zope3 style sheet for CSS2-capable browsers.
+**
+*/
+
+/* Styles for xmltree */
+
+#navtreecontents a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#navtreecontents loading {
+  display: block;
+  padding-left: 31px;
+  height: 18px;
+}
+
+#navtreecontents expand {
+  background-repeat: no-repeat;
+  background-position: center left;
+  padding-left: 14px;
+  display: inline;
+  cursor: pointer;
+}
+
+#navtreecontents expand:hover {
+  background-color: globalBackgroundColor;
+}
+
+
+#navtreecontents icon {
+  background-repeat: no-repeat;
+  background-position: center left;
+  padding-left: 20px;
+  display: inline;
+  cursor: auto;
+}
+
+#navtreecontents icon.selected {
+  background-color: globalBackgroundColor;
+}
+
+#navtreecontents collection {
+  display: block;
+  margin-left: 10px;
+  height: auto;
+}
+
+
+/* Structural elements */
+#global {
+  border-bottom: 0.1em borderStyle borderColor;
+}
+
+#global #userDetails {
+  float: right;
+  margin-top: 1.2em;
+  padding-right: 0.5em;
+}
+
+#actions {
+  background: #369;
+  border-left: 1px solid #369;
+  border-right: 1px solid #369;
+  padding: 0.3em;
+  color: Black;
+  height: 1.3em;
+  border-collapse: collapse;
+}
+
+#actions a {
+  color: White;
+  float: right;
+  border-left: 1px dashed white;
+  padding: 0 0.5em;
+}
+
+#actions a:hover {
+  color: black;
+  background-color: White;
+}
+
+#context_information {
+    padding-top: 1em;
+    width: 15%;
+    float: left;
+    padding-left: 0.5em;
+}
+
+div.row div.field {
+  clear: left;
+  padding-top: 1px;
+}
+
+div.row div.label {
+  color: discreetColor;
+  padding: 0.1em 0.5em 0.1em 0;
+}
+
+div.row span.error {
+  background: red;
+  color: white;
+  padding: 0.1em 0.5em 0.1em 0.5em; /* Same as .itemViews */
+  border: 1px solid red; /* Same as .itemViews */
+  margin: 0;
+  float: left;
+  clear: both;
+}
+
+div.box {
+  margin: 0em 0em 1em 0em;
+  padding: 0em;
+}
+
+div.box h4 {
+  background: #CCCCCC;
+  border: 1px solid #CCCCCC;
+  border-style: solid solid none solid;
+  color: #808080;
+  padding: 0.3em 1em;
+  display: block;
+  font-size: 1em;
+  height: 1em;
+  text-align: center;
+}
+
+
+div.box div.body {
+  background: transparent;
+  border-collapse: collapse;
+  border: 1px solid #CCCCCC;
+}
+
+div.box .content {
+  padding: 0.5em;
+}
+
+div.box h1,
+div.box h2,
+div.box h3,
+div.box h4 {
+  margin: 0;
+}
+
+div.box .even {
+  background-color: #F8F8F8;
+}
+
+div.box .odd {
+  background-color: White;
+}
+
+#metadata .label {
+  font-size: 80%;
+}
+
+.itemViews {
+  background: transparent;
+  border-collapse: collapse;
+  border-bottom: 1px solid #369;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 1em;
+  margin-top: 0.8em;
+  white-space: nowrap;
+}
+
+.itemViews a {
+  background: transparent;
+  border: 1px solid #369;
+  color: Black;
+  font-weight: normal;
+  margin-right: 0.5em;
+  padding: 0.1em 0.5em 0.1em 0.5em;
+}
+
+.itemViews a.selected {
+  background: #369;
+  border-bottom: #369 1px solid;
+  color: White;
+  font-weight: normal;
+}
+
+.itemViews a:hover {
+  background-color: #369;
+  color: White;
+}
+
+#viewspace {
+  border-collapse: collapse;
+  padding: 10px;
+  margin: 0;
+}
+
+table.listingdescription {
+    /* The default table for document listings. Contains name, document types, modification times etc in a file-browser-like fashion */
+  border-collapse: collapse;
+  border-left: 1px solid #CCCCCC;
+  border-bottom: 1px solid #CCCCCC;
+  margin: 1em 0em 1em 0em;
+  /*  clear: both; */
+}
+
+table.listingdescription {
+  width: 100%
+}
+
+table.listingdescription th {
+  background: #CCCCCC;
+  border-top: 1px solid #CCCCCC;
+  border-bottom: 1px solid #CCCCCC;
+  border-right: 1px solid #CCCCCC;
+  color: #808080;
+  font-weight: normal;
+  padding: 0em 1em 0em 1em;
+  white-space: nowrap;
+}
+
+table.listingdescription td.top {
+  border-left: 1px solid White;
+  border-top: 1px solid White ! important;
+  border-right: 1px solid White ! important;
+  text-align: right ! important;
+  padding: 0em 0em 1em 0em;
+  /* insane IE row bug workaround */
+  position: relative;
+  left: -1px;
+  top: -1px;
+}
+
+table.listingdescription tr.odd {
+  /*every second line should be shaded */
+  background: oddRowBackgroundColor;
+}
+
+table.listingdescription tr.even {
+  background: evenRowBackgroundColor;
+}
+
+
+table.listingdescription img, table.listing img {
+  vertical-align: middle;
+}
+
+table.listingdescription td {
+  border-right: borderWidth borderStyle borderColor;
+  padding: 5px;
+  text-align: left;
+}
+
+
+/*colorize the matrix table used in grant.html*/
+table.matrix td.default {
+  background: green;
+}
+
+
+table.matrix td.changed {
+  background: red;
+}
+
+
+div.spacer {
+  clear: both;
+}
+
+.registrationSummary {
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+.registrationSummary .usageSummary {
+  font-weight: bold;
+}
+.registrationSummary .modificationLink {
+  display: block;
+}
+
+
+div.message {
+  background: #FFCE7B;
+  border: 1px solid #FFA500;
+  color: Black;
+  font: bold 80% Verdana, Helvetica, Arial, sans-serif;
+  margin: 2em 0em 1em 0em;
+  padding: 0.5em 1em;
+  vertical-align: middle;
+}
+
+div.message a {
+  color: Black;
+}
+
+/* Style for page error divs.  Use this for displaying errors for a
+   page as a whole.
+ */
+div.page_error {
+  background: #FFCE7B;
+  font: bold 80% Verdana, Helvetica, Arial, sans-serif;
+  padding: 0.5em 1em;
+  vertical-align: middle;
+}
+
+/* queries */
+.query { 
+  padding-top: 1em;
+}
+
+.query .row {
+  padding-top: 0.3em;
+}
+
+.query h4 {
+  font-weight: bold !important;
+}
+
+.query label { 
+  color: discreetColor;
+  font-size: fontSmallSize;
+  font-weight: normal;
+}
+
+.listing {
+  font-size: 100%;
+  margin: 1em 0em 1em 0em;
+}
+table.listing {
+  border-collapse: collapse;
+  border-left: borderWidth borderStyle globalBorderColor;
+  border-bottom: borderWidth borderStyle globalBorderColor;
+}
+table.listing th {
+  background: globalBackgroundColor;
+  border-top: borderWidth borderStyle globalBorderColor;
+  border-bottom: borderWidth borderStyle globalBorderColor;
+  border-right: borderWidth borderStyle globalBorderColor;
+  font-weight: normal;
+  padding: 0.25em 1em;
+  text-transform: textTransform;
+}
+table.listing .top {
+  border-left: borderWidth borderStyle backgroundColor;
+  border-top: borderWidth borderStyle backgroundColor ! important;
+  border-right: borderWidth borderStyle backgroundColor ! important;
+  text-align: right ! important;
+  padding: 0em 0em 1em 0em;
+}
+
+table.listing .listingCheckbox {
+  text-align: center;
+}
+
+.listing a { 
+  text-decoration: none;
+}
+
+.listing .listing-item {
+  padding: 1em;
+}
+
+.listing .description { 
+  padding-top: 0.5em;
+  border-top: borderWidth borderStyle globalBorderColor;
+}
+
+table.listing td {
+  border-right: borderWidth borderStyle globalBorderColor;
+  padding: 0.25em 1em;
+}
+
+table.listing a {
+  text-decoration: none;
+}
+
+table.listing a:hover {
+  text-decoration: underline;
+}
+
+table.listing img {
+  vertical-align: middle;
+}
+
+
+
+.z-context-view #z-content {
+  padding: 1em !important;
+  border: borderWidth borderStyle contentViewBorderColor;
+  border-top: none;
+  background-color: contentBackgroundColor;
+}
+
+.z-content-context {
+  padding: 1em;
+  border: borderWidth borderStyle contentViewBorderColor;
+  border-top: none;
+  background-color: contentBackgroundColor;
+}
+
+.z-context-view .z-form,
+.z-context-view .z-form-edit,
+.z-context-view #z-content .z-form,
+.z-context-view #z-content .z-form-edit,
+.z-context-view #z-content .frame,
+.z-context-view #z-content .z-frame,
+.z-context-view #z-content .topframe,
+.z-context-view #z-content .z-topframe {
+  border: none;
+  padding: 0;
+}
+
+.z-context-views {
+  margin: 0;
+  padding-left: 1em;
+  list-style: none;
+  background-color: transparent;
+  border-bottom: borderWidth borderStyle contentViewBorderColor;
+  line-height: normal;
+  font-size: 92%;
+  margin-top: 1px;
+}
+
+.z-context-views li {
+  display: inline;
+  margin-right: 0.5em;
+}
+
+.z-context-views li a {
+  color: contentViewFontColor;
+  background-color: transparent;
+  border: borderWidth borderStyle contentViewBorderColor;
+  padding: 0em 1em 0em 1em;
+  text-decoration: none;
+  text-transform: textTransform;
+  z-index: 1;
+}
+  
+.z-context-views .selected a {
+  background-color: contentViewBackgroundColor;
+  border-bottom: contentViewBackgroundColor borderWidth borderStyle;
+  color: contentViewFontColor;
+}
+
+.z-context-views li a:hover {
+  background-color: contentViewBackgroundColor;
+  color: contentViewFontColor;
+}
+
+.z-context-actions {
+  background-color: contentViewBackgroundColor;
+  border-left: borderWidth borderStyle contentViewBorderColor;
+  border-right: borderWidth borderStyle contentViewBorderColor;
+  border-bottom: borderWidth borderStyle contentViewBorderColor;
+  text-align: right;
+  text-transform: textTransform;
+  color: contentViewFontColor;
+  padding: 0 0 0 1em;
+  z-index: 2;
+  position:relative;
+  height: 1.6em;
+  font-size: fontSmallSize;
+}
+
+.z-context-actions ul,
+.z-context-actions li {
+  margin: 0;
+  list-style: none;
+  list-style-image: none;
+  display: inline;
+  color: fontColor;
+  text-align: left;
+}
+
+.z-context-actions ul {
+  line-height: 1.6em;
+  padding: 0;
+  margin: 0;
+}
+
+.z-context-actions li {
+  float: right;
+  z-index: 4;
+  border-left: borderWidth borderStyle contentViewBorderColor;
+  line-height: 1.6em;
+  padding: 0 0.5em;
+  color: discreetColor;
+}
+
+.z-context-actions a {
+  text-decoration: none;
+  color: contentViewFontColor;
+}
+
+.z-context-actions a:hover {
+  text-decoration: underline;
+}

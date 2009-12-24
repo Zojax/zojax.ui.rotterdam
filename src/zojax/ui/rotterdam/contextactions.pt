@@ -1,0 +1,10 @@
+<div class="z-context-actions" tal:define="actions view/actions">
+  <ul tal:condition="actions">
+    <li tal:repeat="action actions">
+      <a tal:content="action/title"
+	 tal:omit-tag="not:action/action"
+	 tal:attributes="href action/action; title action/description"></a>
+    </li>
+  </ul>
+  <tal:block condition="not:actions">&nbsp;</tal:block>
+</div>

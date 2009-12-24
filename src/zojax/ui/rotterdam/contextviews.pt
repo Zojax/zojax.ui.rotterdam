@@ -1,0 +1,19 @@
+<ul class="z-context-views" tal:define="actions view/actions" tal:condition="actions">
+  <tal:views repeat="action actions">
+    <tal:block tal:define="selected action/selected|nothing">
+      <li tal:condition="not:selected">
+	<a tal:content="action/title"
+	   tal:attributes="href action/action; title action/description">
+	  View name
+	</a>
+      </li>
+      <li class="selected" tal:condition="selected">
+	<a tal:content="action/title"
+	   tal:attributes="href action/action; title action/description">
+	  View name
+	</a>
+      </li>
+    </tal:block>
+  </tal:views>
+</ul>
+<div class="z-context-views" tal:condition="not:view/actions">&nbsp;</div>

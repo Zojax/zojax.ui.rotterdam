@@ -1,0 +1,69 @@
+<metal:page metal:define-macro="page"><metal:doctype define-slot="doctype"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"></metal:doctype>
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal" 
+      tal:define="language request/locale/getLocaleID;
+		  dummy resourcepackage:zojax-rotterdam">
+
+  <head tal:attributes="url python:'%s/'%request.URL;
+			base python:'%s/'%request.URL[-1];
+			portal request/URL">
+    <title metal:define-slot="title"
+           tal:content="string:Z3: ${context/zope:title_or_name}">Z3 UI</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!--resourcepackages-->
+    <meta name="generator" content="zojax - http://zojax.net" />
+    
+    <!-- Disable IE6 image toolbar -->
+    <meta http-equiv="imagetoolbar" content="no" />
+  </head>
+
+  <body>
+    <div id="z-portal">
+      <div id="z-portal-header">
+	<tal:block tal:content="structure pageelement:portal.personalbar" />
+
+	<div id="z-portal-logo">
+	  <img tal:attributes="src context/++resource++logo.gif" />
+	</div>
+	<div class="visualClear"></div>
+
+	<div class="z-portal-divider">&nbsp;</div>
+	<tal:block tal:content="structure pageelement:portal.breadcrumbs" />
+      </div>
+
+      <div id="z-portal-workspace" style="padding: 0.5em 2em;">
+	<table id="portal-columns-table" cellspacing="0" cellpadding="0">
+	  <tr valign="top">
+	    <td id="portal-column-one">
+	      <div tal:content="structure context/@@rotterdam-leftcolumn|nothing" />
+	    </td>
+	    <td id="portal-column-content">
+	      <metal:blog define-slot="message"/>
+
+	      <metal:block metal:define-slot="workspace">
+		  <metal:block metal:define-slot="viewspace">
+		    <tal:block content="structure context/@@rotterdam-contextviews" />
+		    <tal:block content="structure context/@@rotterdam-contextactions" />
+
+		    <div id="z-viewspace">
+		      <div class="z-context-view">
+			<div id="z-content">
+			  <metal:block metal:define-slot="body" />
+			</div>
+		      </div>
+		    </div>
+		  </metal:block>
+	      </metal:block>
+	    </td>
+	  </tr>
+	</table>
+      </div>
+
+      <div id="z-portal-footer">
+	Powered by <a href="http://zojax.net">zojax</a>
+      </div>
+    </body>
+  </html>
+</metal:page>

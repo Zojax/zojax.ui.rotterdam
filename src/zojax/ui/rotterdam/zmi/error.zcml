@@ -1,0 +1,27 @@
+<zope:configure
+    xmlns:zope="http://namespaces.zope.org/zope"
+    xmlns="http://namespaces.zope.org/browser">
+
+  <!--Error Logging Utility -->
+  <pages
+     for="zope.error.interfaces.IErrorReportingUtility"
+     permission="zope.ManageServices"
+     layer="..IRotterdam"
+     class=".error.EditErrorLog">
+
+    <page name="index.html" template="error.pt"
+          menu="zmi_views" title="Errors" />
+    <page name="configure.html" template="error_config.pt"
+          menu="zmi_views" title="Configure" />
+    <page name="edit.html" attribute="updateProperties" />
+    <page name="showEntry.html" template="errorentry.pt"/>
+    <page name="showTextTBEntry.html" template="texttbentry.pt"/>
+  </pages>
+
+  <icon 
+     name="zmi_icon"
+     for="zope.error.interfaces.IErrorReportingUtility"
+     file="error.gif" 
+     layer="..IRotterdam" />
+
+</zope:configure>

@@ -1,0 +1,28 @@
+<configure
+   xmlns="http://namespaces.zope.org/zope"
+   xmlns:zcml="http://namespaces.zope.org/zcml"
+   xmlns:zojax="http://namespaces.zope.org/zojax"
+   xmlns:browser="http://namespaces.zope.org/browser">
+   
+  <include file="error.zcml" />
+
+  <!-- -->
+  <browser:page
+     name="commonTasks"
+     for="zope.app.container.interfaces.IWriteContainer"
+     class="zope.app.container.browser.contents.Contents"
+     template="commontasks.pt"
+     permission="zope.ManageContent"
+     layer="..IRotterdam" />
+
+  <!-- registration -->
+  <browser:menuItem
+     for="*"
+     menu="zmi_views"
+     title="Registration"
+     action="registration.html"
+     order="999"
+     filter="python:'/++etc++site/' in str(request.URL)"
+     layer="..IRotterdam" />
+
+</configure>
