@@ -1,0 +1,69 @@
+<configure 
+   xmlns="http://namespaces.zope.org/zope"
+   xmlns:zcml="http://namespaces.zope.org/zcml"
+   xmlns:zojax="http://namespaces.zope.org/zojax"
+   xmlns:browser="http://namespaces.zope.org/browser">
+
+  <interface
+     name="RotterdamLayout"
+     interface=".IRotterdam"
+     type="zope.publisher.interfaces.browser.IBrowserSkinType" />
+
+  <zojax:resource
+     name="logo.gif"
+     type="gif"
+     file="zope3logo.gif"
+     layer=".IRotterdam" />
+
+  <browser:page
+     name="skin_macros"
+     for="*"
+     permission="zope.Public"
+     template="template.pt"
+     layer=".IRotterdam" />
+
+  <browser:page
+     name="rotterdam-leftcolumn"
+     for="*"
+     template="leftcolumn.pt"
+     permission="zope.Public"
+     layer=".IRotterdam" />
+
+  <!-- views/actions -->
+  <browser:page
+     for="*"
+     name="rotterdam-contextviews"
+     template="contextviews.pt"
+     class=".contextviews.ContextViews"
+     permission="zope.Public"
+     layer=".IRotterdam" />
+
+  <browser:page
+     for="*"
+     name="rotterdam-contextactions"
+     template="contextactions.pt"
+     class=".contextactions.ContextActions"
+     permission="zope.Public"
+     layer=".IRotterdam" />
+
+  <!-- login item for personal bar -->
+  <browser:viewlet
+     name="zojax.authentication-login"
+     class=".loginitem.LoginMenuItem"
+     manager="zojax.personal.bar.interfaces.IPersonalBar"
+     layer=".IRotterdam"
+     permission="zope.Public"
+     zcml:condition="installed zojax.personal.bar" />
+
+  <!-- styles -->
+  <zojax:resourceinclude
+     name="zojax-rotterdam.css"
+     library="zojax-rotterdam"
+     type="stylesheet"
+     file="styles.css"
+     require="zojax"
+     filetype="zrt" />
+
+  <include package=".zmi" />
+
+</configure>
