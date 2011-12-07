@@ -1,11 +1,11 @@
 <html metal:use-macro="context/@@standard_macros/view"
-      i18n:domain="zope">
+      i18n:domain="zojax.ui.rotterdam">
   <head>
     <title metal:fill-slot="title" i18n:translate="">Configure Error Log</title>
   </head>
   <body>
     <div metal:fill-slot="body">
-      <h1>Configure Error Reporting</h1>
+      <h1 i18n:translate="">Configure Error Reporting</h1>
       <p class="pageDescription" i18n:translate="">
 	You can configure how many exceptions should be kept
 	and whether the exceptions should be copied to Zope's event log

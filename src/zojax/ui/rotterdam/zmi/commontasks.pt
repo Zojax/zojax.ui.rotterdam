@@ -1,5 +1,5 @@
 <tal:block define="addingInfo context/@@+/addingInfo|nothing"
-           condition="addingInfo" i18n:domain="zope">
+           condition="addingInfo" i18n:domain="zojax.ui.rotterdam">
 
   <tal:block repeat="info addingInfo"
 	     define="namesRequired context/@@+/nameAllowed">

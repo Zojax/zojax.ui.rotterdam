@@ -1,5 +1,5 @@
 <html metal:use-macro="context/@@standard_macros/view"
-      i18n:domain="zope">
+      i18n:domain="zojax.ui.rotterdam">
   <head>
     <title metal:fill-slot="title" i18n:translate="">View Error Log Report</title>
   </head>
