@@ -1,0 +1,143 @@
+##############################################################################
+#
+# Copyright (c) 2003-2004 Zope Corporation and Contributors.
+# All Rights Reserved.
+#
+# This software is subject to the provisions of the Zope Public License,
+# Version 2.1 (ZPL).  A copy of the ZPL should accompany this distribution.
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY AND ALL EXPRESS OR IMPLIED
+# WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+# WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND FITNESS
+# FOR A PARTICULAR PURPOSE.
+#
+##############################################################################
+msgid ""
+msgstr ""
+"Project-Id-Version: Development/Unknown\n"
+"POT-Creation-Date: Sun Dec 11 10:46:36 2011\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Zope 3 Developers <zope3-dev@zope.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: zope/app/locales/extract.py\n"
+
+#: src/zojax/ui/rotterdam/leftcolumn.pt:7
+msgid "Add:"
+msgstr ""
+
+#: src/zojax/ui/rotterdam/template.pt:65
+msgid "Powered by ${link}"
+msgstr ""
+
+#: src/zojax/ui/rotterdam/template.pt:66
+msgid "zojax"
+msgstr ""
+
+#: src/zojax/ui/rotterdam/zmi/error.pt:14
+msgid "No exceptions logged."
+msgstr ""
+
+#: src/zojax/ui/rotterdam/zmi/error.pt:20
+#: src/zojax/ui/rotterdam/zmi/errorentry.pt:21
+msgid "Time"
+msgstr ""
+
+#: src/zojax/ui/rotterdam/zmi/error.pt:21
+#: src/zojax/ui/rotterdam/zmi/errorentry.pt:26
+msgid "User"
+msgstr ""
+
+#: src/zojax/ui/rotterdam/zmi/error.pt:22
+msgid "Exception"
+msgstr ""
+
+#: src/zojax/ui/rotterdam/zmi/error.pt:4
+#: src/zojax/ui/rotterdam/zmi/errorentry.pt:4
+msgid "View Error Log Report"
+msgstr ""
+
+#: src/zojax/ui/rotterdam/zmi/error.pt:50
+#. Default: "Refresh"
+msgid "refresh-button"
+msgstr ""
+
+#: src/zojax/ui/rotterdam/zmi/error.pt:8
+msgid "Exception Log (most recent first)"
+msgstr ""
+
+#: src/zojax/ui/rotterdam/zmi/error.pt:9
+msgid "This page lists the exceptions that have occurred in this site recently."
+msgstr ""
+
+#: src/zojax/ui/rotterdam/zmi/error_config.pt:19
+msgid "Number of exceptions to keep"
+msgstr ""
+
+#: src/zojax/ui/rotterdam/zmi/error_config.pt:27
+msgid "Copy exceptions to the event log"
+msgstr ""
+
+#: src/zojax/ui/rotterdam/zmi/error_config.pt:35
+msgid "Ignored exception types"
+msgstr ""
+
+#: src/zojax/ui/rotterdam/zmi/error_config.pt:4
+msgid "Configure Error Log"
+msgstr ""
+
+#: src/zojax/ui/rotterdam/zmi/error_config.pt:44
+#. Default: "Save Changes"
+msgid "save-changes-button"
+msgstr ""
+
+#: src/zojax/ui/rotterdam/zmi/error_config.pt:8
+msgid "Configure Error Reporting"
+msgstr ""
+
+#: src/zojax/ui/rotterdam/zmi/error_config.pt:9
+msgid "You can configure how many exceptions should be kept and whether the exceptions should be copied to Zope's event log file(s)."
+msgstr ""
+
+#: src/zojax/ui/rotterdam/zmi/errorentry.pt:10
+msgid "Header"
+msgstr ""
+
+#: src/zojax/ui/rotterdam/zmi/errorentry.pt:12
+msgid "Exception traceback"
+msgstr ""
+
+#: src/zojax/ui/rotterdam/zmi/errorentry.pt:14
+msgid "The specified log entry was not found. It may have expired."
+msgstr ""
+
+#: src/zojax/ui/rotterdam/zmi/errorentry.pt:31
+msgid "Request URL"
+msgstr ""
+
+#: src/zojax/ui/rotterdam/zmi/errorentry.pt:36
+msgid "Exception Type"
+msgstr ""
+
+#: src/zojax/ui/rotterdam/zmi/errorentry.pt:41
+msgid "Exception Value"
+msgstr ""
+
+#: src/zojax/ui/rotterdam/zmi/errorentry.pt:46
+msgid "Traceback"
+msgstr ""
+
+#: src/zojax/ui/rotterdam/zmi/errorentry.pt:60
+msgid "Display traceback as text"
+msgstr ""
+
+#: src/zojax/ui/rotterdam/zmi/errorentry.pt:68
+msgid "REQUEST"
+msgstr ""
+
+#: src/zojax/ui/rotterdam/zmi/errorentry.pt:79
+#. Default: "Return to log"
+msgid "return-to-log-button"
+msgstr ""
+
