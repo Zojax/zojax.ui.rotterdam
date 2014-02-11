@@ -1,0 +1,217 @@
+==============
+Visitors workspace
+==============
+
+    >>> from zope import interface, component, event
+    >>> from zope.app.component.hooks import setSite
+    >>> from zope.app.component.site import LocalSiteManager
+    >>> from zope.testbrowser.testing import Browser
+
+    >>> root = getRootFolder()
+    >>> setSite(root)
+    >>> sm = root.getSiteManager()
+
+
+Browser tests
+
+
+    >>> admin = Browser()
+    >>> admin.addHeader("Authorization", "Basic mgr:mgrpw")
+    >>> admin.handleErrors = False
+    >>> admin.open('http://localhost/skin_macros/')
+    >>> print admin.contents
+    <!DOCTYPE ...
+    ...
+    <link rel="stylesheet" type="text/css" href="http://localhost/.../zojax-rotterdam.css" />
+    ...
+              	  <ul class="z-context-views">
+          <li>
+    	<a href="http://localhost/@@contents.html" title="">Contents</a>
+          </li>
+          <li>
+    	<a href="http://localhost/@@preview.html" title="">Preview</a>
+          </li>
+          <li>
+    	<a href="http://localhost/@@EditMetaData.html" title="">Metadata</a>
+    ...
+          <a href="http://localhost/++etc++site/@@SelectedManagementView.html"
+             title="">Manage Site</a>
+        </li>
+        <li>
+          <a href="http://localhost/settings/" title="">System settings</a>
+        </li>
+        <li>
+          <a href="http://localhost/++etc++process/index.html"
+             title="">Manage Process</a>
+        </li>
+        <li>
+          <a href="http://localhost/@@+" title="">Add</a>
+        </li>
+        <li>
+          <a href="http://localhost/@@find.html" title="">Find</a>
+        </li>
+        <li>
+          <a href="http://localhost/@@errorRedirect.html"
+             title="">Errors</a>
+        </li>
+      </ul>
+    ...
+      </html>
+
+    >>> admin.open('http://localhost/rotterdam-leftcolumn/')
+    >>> print admin.contents
+    <div class="z-portlet portlet-navigation">
+      <h2 class="z-portlet-header">Navigation</h2>
+      <div class="z-portlet-body">
+        <div xmlns="http://www.zope.org/zope3xmltree" id="navtreecontents" class="z-portlet-item" onclick="treeclicked(event);">Loading...</div>
+      </div>
+    </div>
+    <br />
+    <div class="z-portlet" id="commonTasks">
+      <h2 class="z-portlet-header">Add:</h2>
+      <div class="z-portlet-body">
+        <div class="z-portlet-item odd">
+        <div class="odd">
+          <a href="http://localhost/@@contents.html?type_name=BrowserAdd__zope.app.catalog.catalog.Catalog"
+             class="">Catalog</a>
+        </div>
+        <div class="even">
+          <a href="http://localhost/@@contents.html?type_name=BrowserAdd__zope.error.error.ErrorReportingUtility"
+             class="">Error Logging Utility</a>
+        </div>
+        <div class="odd">
+          <a href="http://localhost/@@+/action.html?type_name=zope.app.file.File"
+             class="">File</a>
+        </div>
+        <div class="even">
+          <a href="http://localhost/@@contents.html?type_name=BrowserAdd__zope.app.folder.folder.Folder"
+             class="">Folder</a>
+    ...
+    </div>
+
+
+    >>> admin.open('http://localhost/rotterdam-contextviews/')
+    >>> print admin.contents
+    <ul class="z-context-views">
+          <li>
+    	<a href="http://localhost/@@contents.html" title="">Contents</a>
+          </li>
+          <li>
+    	<a href="http://localhost/@@preview.html" title="">Preview</a>
+          </li>
+          <li>
+    	<a href="http://localhost/@@EditMetaData.html" title="">Metadata</a>
+          </li>
+    </ul>
+
+
+    >>> admin.open('http://localhost/rotterdam-contextactions')
+    >>> print admin.contents
+    <div class="z-context-actions">
+      <ul>
+        <li>
+          <a href="http://localhost/++etc++site/@@SelectedManagementView.html"
+             title="">Manage Site</a>
+        </li>
+        <li>
+          <a href="http://localhost/settings/" title="">System settings</a>
+        </li>
+        <li>
+          <a href="http://localhost/++etc++process/index.html"
+             title="">Manage Process</a>
+        </li>
+        <li>
+          <a href="http://localhost/@@+" title="">Add</a>
+        </li>
+        <li>
+          <a href="http://localhost/@@find.html" title="">Find</a>
+        </li>
+        <li>
+          <a href="http://localhost/@@errorRedirect.html"
+             title="">Errors</a>
+        </li>
+      </ul>
+    </div>
+
+
+    >>> admin.open('http://localhost/commonTasks/')
+    >>> print admin.contents
+        <div class="odd">
+          <a href="http://localhost/@@contents.html?type_name=BrowserAdd__zope.app.catalog.catalog.Catalog"
+             class="">Catalog</a>
+        </div>
+        <div class="even">
+          <a href="http://localhost/@@contents.html?type_name=BrowserAdd__zope.error.error.ErrorReportingUtility"
+             class="">Error Logging Utility</a>
+        </div>
+        <div class="odd">
+          <a href="http://localhost/@@+/action.html?type_name=zope.app.file.File"
+             class="">File</a>
+        </div>
+        <div class="even">
+          <a href="http://localhost/@@contents.html?type_name=BrowserAdd__zope.app.folder.folder.Folder"
+             class="">Folder</a>
+        </div>
+        <div class="odd">
+          <a href="http://localhost/@@+/action.html?type_name=zope.app.file.Image"
+             class="">Image</a>
+        </div>
+        <div class="even">
+          <a href="http://localhost/@@contents.html?type_name=BrowserAdd__lovely.memcached.utility.MemcachedClient"
+             class="">Memcached Client</a>
+        </div>
+        <div class="odd">
+          <a href="http://localhost/@@+/action.html?type_name=AddPluggableAuthentication.html"
+             class="">Pluggable Authentication Utility</a>
+        </div>
+        <div class="even">
+          <a href="http://localhost/@@contents.html?type_name=BrowserAdd__zope.app.principalannotation.PrincipalAnnotationUtility"
+             class="">Principal Annotation Utility</a>
+        </div>
+        <div class="odd">
+          <a href="http://localhost/@@contents.html?type_name=BrowserAdd__zope.app.cache.ram.RAMCache"
+             class="">RAM Cache</a>
+        </div>
+        <div class="even">
+          <a href="http://localhost/@@contents.html?type_name=BrowserAdd__zope.app.component.site.SiteManagementFolder"
+             class="">Site-Management Folder</a>
+        </div>
+        <div class="odd">
+          <a href="http://localhost/@@contents.html?type_name=BrowserAdd__zope.app.i18n.translationdomain.TranslationDomain"
+             class="">Translation Domain</a>
+        </div>
+        <div class="even">
+          <a href="http://localhost/@@contents.html?type_name=BrowserAdd__zope.app.intid.IntIds"
+             class="">Unique Id Utility</a>
+        </div>
+
+    >>> admin.open('http://localhost/++etc++site')
+    >>> print admin.contents
+    <!DOCTYPE ...
+    ...
+          <title>Z3: ++etc++site</title>
+    ...
+    	<a href="http://localhost/++etc++site/@@contents.html"
+        title="">Contents</a>
+          </li>
+          <li>
+    	<a href="http://localhost/++etc++site/@@registrations.html"
+        title="">Registrations</a>
+          </li>
+          <li>
+    	<a href="http://localhost/++etc++site/@@EditMetaData.html"
+        title="">Metadata</a>
+    ...
+          <a href="http://localhost/++etc++site/@@+" title="">Add Site Management Folder</a>
+        </li>
+        <li>
+          <a href="http://localhost/++etc++site/@@find.html"
+             title="">Find</a>
+        </li>
+        <li>
+          <a href="http://localhost/++etc++site/@@errorRedirect.html"
+             title="">Errors</a>
+    ...
+      </html>
+
+    >>> setSite(None)
